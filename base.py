@@ -18,6 +18,8 @@
 """
 Base utilities to build API operation managers and objects on top of.
 """
+from oslo_log import log as logging
+LOG = logging.getLogger(__name__)
 
 import abc
 import contextlib

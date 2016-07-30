@@ -51,6 +51,7 @@ from novaclient.v2 import volume_snapshots
 from novaclient.v2 import volume_types
 from novaclient.v2 import volumes
 
+from novaclient.v2 import policys
 
 class Client(object):
     """Top-level object to access the OpenStack Compute API.
@@ -170,6 +171,8 @@ class Client(object):
         self.server_groups = server_groups.ServerGroupsManager(self)
         self.server_migrations = \
             server_migrations.ServerMigrationsManager(self)
+
+        self.policys = policys.PolicysManager(self)
 
         # Add in any extensions...
         if extensions:
